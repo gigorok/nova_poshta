@@ -2,6 +2,7 @@ module NovaPoshta
   class Result
 
     CALLER_MAP = {
+        'getAreas' => 'Area',
         'getCities' => 'City',
         'getWarehouses' => 'Warehouse'
     }.freeze

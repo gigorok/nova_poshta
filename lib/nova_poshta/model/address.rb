@@ -11,6 +11,10 @@ module NovaPoshta
         api.request('getWarehouses', {city_ref: city_ref}.merge(params))
       end
 
+      def get_areas(params={})
+        api.request('getAreas', params)
+      end
+
     end
   end
 end
