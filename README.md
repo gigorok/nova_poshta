@@ -36,6 +36,7 @@ To get cities with novaposhta service you can do next:
 
 ```ruby
 a = NovaPoshta::Model::Address.new
+a.get_areas.data
 response = a.get_cities(find_by_string: '[city name]')
 city = response.data.sample
 warehouses = city.warehouses(find_by_string: '[warehouse address]').data
