@@ -1,0 +1,53 @@
+{
+  "success": true,
+  "data": [
+    {
+      "SiteKey": "11738",
+      "Description": "Відділення № 1: вул. Абрикосова, 1",
+      "DescriptionRu": "Отделение № 1: ул. Абрикосовая, 1",
+      "Phone": "0-800-500-609",
+      "TypeOfWarehouse": "9a68df70-0267-42a8-bb5c-37f427e36ee4",
+      "Ref": "4ecddea5-1986-11e5-add9-005056887b8d",
+      "Number": "1",
+      "CityRef": "8e1718f5-1972-11e5-add9-005056887b8d",
+      "CityDescription": "Авангард",
+      "CityDescriptionRu": "Авангард",
+      "Longitude": "30.616768000000000",
+      "Latitude": "46.475177000000000",
+      "PostFinance": "1",
+      "POSTerminal": "0",
+      "TotalMaxWeightAllowed": 0,
+      "PlaceMaxWeightAllowed": 0,
+      "Reception": {
+        "Monday": "10:30-18:00",
+        "Tuesday": "10:30-18:00",
+        "Wednesday": "10:30-18:00",
+        "Thursday": "10:30-18:00",
+        "Friday": "10:30-18:00",
+        "Saturday": "-",
+        "Sunday": "-"
+      },
+      "Delivery": {
+        "Monday": "09:00-16:45",
+        "Tuesday": "09:00-16:45",
+        "Wednesday": "09:00-16:45",
+        "Thursday": "09:00-16:45",
+        "Friday": "09:00-16:45",
+        "Saturday": "09:00-16:00",
+        "Sunday": "-"
+      },
+      "Schedule": {
+        "Monday": "09:00-18:00",
+        "Tuesday": "09:00-18:00",
+        "Wednesday": "09:00-18:00",
+        "Thursday": "09:00-18:00",
+        "Friday": "09:00-18:00",
+        "Saturday": "09:00-16:00",
+        "Sunday": "-"
+      }
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "info": []
+}

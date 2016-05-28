@@ -1,0 +1,53 @@
+{
+  "success": true,
+  "data": [
+    {
+      "Description": "Авангард",
+      "DescriptionRu": "Авангард",
+      "Ref": "8e1718f5-1972-11e5-add9-005056887b8d",
+      "Delivery1": "1",
+      "Delivery2": "1",
+      "Delivery3": "1",
+      "Delivery4": "1",
+      "Delivery5": "1",
+      "Delivery6": "0",
+      "Delivery7": "0",
+      "Area": "71508136-9b87-11de-822f-000c2965ae0e",
+      "Conglomerates": null,
+      "CityID": "1042"
+    },
+    {
+      "Description": "Авіаторське",
+      "DescriptionRu": "Авиаторское",
+      "Ref": "d30a9675-7404-11e5-8d8d-005056887b8d",
+      "Delivery1": "1",
+      "Delivery2": "1",
+      "Delivery3": "1",
+      "Delivery4": "1",
+      "Delivery5": "1",
+      "Delivery6": "0",
+      "Delivery7": "0",
+      "Area": "7150812b-9b87-11de-822f-000c2965ae0e",
+      "Conglomerates": null,
+      "CityID": "1140"
+    },
+    {
+      "Description": "Агрономічне",
+      "DescriptionRu": "Агрономичное",
+      "Ref": "ebc0eda9-93ec-11e3-b441-0050568002cf",
+      "Delivery1": "1",
+      "Delivery2": "1",
+      "Delivery3": "1",
+      "Delivery4": "1",
+      "Delivery5": "1",
+      "Delivery6": "0",
+      "Delivery7": "0",
+      "Area": "7150812b-9b87-11de-822f-000c2965ae0e",
+      "Conglomerates": null,
+      "CityID": "890"
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "info": []
+}

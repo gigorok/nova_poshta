@@ -1,11 +1,7 @@
 module NovaPoshta
   class Result
 
-    CALLER_MAP = {
-        'getAreas' => 'Area',
-        'getCities' => 'City',
-        'getWarehouses' => 'Warehouse'
-    }.freeze
+    include Enumerable
 
     attr_accessor :success, :data, :errors, :warnings, :info
     attr_reader :body, :raw_body
@@ -23,7 +19,10 @@ module NovaPoshta
 
     def data
       body['data'].map do |attrs|
-        response_class.new(attrs, @api)
+        response_class.new(attrs) do |r|
+          r.api = @api
+          r.result = self
+        end
       end if body['data']
     end
 
@@ -39,10 +38,16 @@ module NovaPoshta
       body['info']
     end
 
+    def each(&block)
+      data.each do |member|
+        block.call(member)
+      end
+    end
+
     protected
 
     def response_class
-      "::NovaPoshta::Response::#{CALLER_MAP[@called_method]}".constantize
+      "::NovaPoshta::Response::#{@called_method[3..-1].singularize}".safe_constantize
     end
 
   end

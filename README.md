@@ -1,6 +1,6 @@
 # NovaPoshta
 
-Ruby-client to novaposhta.ua API.
+Ruby-client to novaposhta.ua API2.
 
 Look at API documentation by link https://my.novaposhta.ua/data/instruction_JSON_ver.1.7.pdf
 
@@ -31,15 +31,15 @@ end
 ```
 
 ## Usage
-
-To get cities with novaposhta service you can do next:
-
 ```ruby
-a = NovaPoshta::Model::Address.new
-a.get_areas.data
-response = a.get_cities(find_by_string: '[city name]')
-city = response.data.sample
-warehouses = city.warehouses(find_by_string: '[warehouse address]').data
+a = NovaPoshta::Model::Address.new # an instance of address model
+area = a.areas.to_a.sample # to get a some area
+area.cities # to get all cities
+city = a.cities(find_by_string: '[city name]').to_a.sample # you can filter by city name
+city.area # get the area from a city instance
+warehouse = city.warehouses(find_by_string: '[warehouse address]').to_a.sample
+a.warehouses(city.ref)
+a.areas
 ```
 
 ## Development

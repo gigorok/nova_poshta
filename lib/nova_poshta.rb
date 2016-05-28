@@ -1,14 +1,12 @@
-require "nova_poshta/version"
-require "nova_poshta/configuration"
-require "nova_poshta/api"
-require "nova_poshta/response/base"
-require "nova_poshta/response/area"
-require "nova_poshta/response/city"
-require "nova_poshta/response/warehouse"
-require "nova_poshta/result"
-require "nova_poshta/model/base"
-require "nova_poshta/model/address"
 require 'active_support/all'
+
+# require base classes because the order in this situation makes sense
+require "nova_poshta/response/base"
+require "nova_poshta/model/base"
+
+Dir[File.dirname(__FILE__) + '/nova_poshta/*.rb'].each { |f| require f }
+Dir[File.dirname(__FILE__) + '/nova_poshta/response/*.rb'].each { |f| require f }
+Dir[File.dirname(__FILE__) + '/nova_poshta/model/*.rb'].each { |f| require f }
 
 module NovaPoshta
 

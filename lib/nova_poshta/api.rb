@@ -18,18 +18,22 @@ module NovaPoshta
       ::NovaPoshta::Result.new(response, called_method, self)
     end
 
-    def request_body(called_method, method_properties)
+    def request_body(called_method, method_props={})
       camelize_keys(
           {
               api_key: api_key,
               model_name: model_name,
               called_method: called_method,
-              method_properties: camelize_keys(method_properties, :upper)
+              method_properties: method_properties(method_props)
           }, :lower
       ).to_json
     end
 
     protected
+
+    def method_properties(method_props)
+      camelize_keys(method_props, :upper)
+    end
 
     def post(req_body)
       uri = URI.parse(API_URL)
