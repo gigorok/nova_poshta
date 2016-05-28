@@ -1,5 +1,7 @@
 # NovaPoshta
 
+[![Build Status](https://travis-ci.org/gigorok/nova_poshta.svg?branch=master)](https://travis-ci.org/gigorok/nova_poshta)
+
 Ruby-client to novaposhta.ua API2.
 
 Look at API documentation by link https://my.novaposhta.ua/data/instruction_JSON_ver.1.7.pdf

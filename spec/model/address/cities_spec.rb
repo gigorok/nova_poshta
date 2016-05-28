@@ -205,13 +205,13 @@ describe 'getCities' do
       city.area
     end
 
-    # it 'response should be an instance of NovaPoshta::Result' do
-    #   expect(subject).to be_instance_of(NovaPoshta::Result)
-    # end
+    it 'response should be an instance of NovaPoshta::Result' do
+      expect(subject).to be_instance_of(NovaPoshta::Result)
+    end
 
-    # it 'response should be success' do
-    #   expect(subject.success?).to eq(true)
-    # end
+    it 'response should be success' do
+      expect(subject.success?).to eq(true)
+    end
 
     it 'check city attributes' do # look at fixture
       area = subject.first
