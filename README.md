@@ -1,5 +1,6 @@
 # NovaPoshta
 
+[![Gem Version](https://badge.fury.io/rb/nova_poshta.svg)](https://badge.fury.io/rb/nova_poshta)
 [![Build Status](https://travis-ci.org/gigorok/nova_poshta.svg?branch=master)](https://travis-ci.org/gigorok/nova_poshta)
 
 Ruby-client to novaposhta.ua API2.
