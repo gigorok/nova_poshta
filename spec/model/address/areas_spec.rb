@@ -73,21 +73,19 @@ describe 'getAreas' do
               methodProperties: {}
           }.to_json).
           to_return(status: 200, body: read_fixture_file('get_cities.json'))
-
-      area.api = model.api
     end
 
     subject do
       area.cities
     end
 
-    # it 'response should be an instance of NovaPoshta::Result' do
-    #   expect(subject).to be_instance_of(NovaPoshta::Result)
-    # end
-    #
-    # it 'response should be success' do
-    #   expect(subject.success?).to eq(true)
-    # end
+    it 'response should be an instance of NovaPoshta::Result' do
+      expect(subject).to be_instance_of(NovaPoshta::Result)
+    end
+
+    it 'response should be success' do
+      expect(subject.success?).to eq(true)
+    end
 
     it 'check city attributes' do # look at fixture
       city = subject.first

@@ -10,6 +10,10 @@ Dir[File.dirname(__FILE__) + '/nova_poshta/model/*.rb'].each { |f| require f }
 
 module NovaPoshta
 
+  def self.api
+    @@api ||= NovaPoshta::Api.new
+  end
+
   def self.configuration
     @configuration ||= Configuration.new
   end

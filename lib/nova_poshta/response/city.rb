@@ -6,11 +6,11 @@ module NovaPoshta
                     :delivery5, :delivery6, :delivery7, :area_ref, :conglomerates, :city_id
 
       def warehouses(params={})
-        @api.request('getWarehouses', {city_ref: self.ref}.merge(params))
+        address.warehouses(self.ref, params)
       end
 
       def area(params={})
-        @api.request('getAreas', params).select { |area| area.ref == self.area_ref }.first.result
+        address.areas(params).select { |area| area.ref == self.area_ref }.first.result
       end
 
       # city has area attribute, but it should be area_ref, so next writer will fix this situation

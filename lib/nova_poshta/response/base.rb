@@ -2,7 +2,7 @@ module NovaPoshta
   module Response
     class Base
 
-      attr_accessor :api, :result
+      attr_accessor :result
 
       def initialize(attrs)
         attrs.each do |k, v|
@@ -12,6 +12,10 @@ module NovaPoshta
         end
 
         yield self if block_given?
+      end
+
+      def address
+        @address ||= Model::Address.new
       end
 
     end

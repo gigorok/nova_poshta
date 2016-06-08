@@ -117,8 +117,6 @@ describe 'getWarehouses' do
               methodProperties: {}
           }.to_json).
           to_return(status: 200, body: read_fixture_file('get_cities.json'))
-
-      warehouse.api = model.api
     end
 
     subject do

@@ -6,11 +6,10 @@ module NovaPoshta
     attr_accessor :success, :data, :errors, :warnings, :info
     attr_reader :body, :raw_body
 
-    def initialize(raw_body, called_method, api)
+    def initialize(raw_body, called_method)
       @raw_body = raw_body
       @body = JSON.parse(raw_body)
       @called_method = called_method
-      @api = api
     end
 
     def success?
@@ -20,7 +19,6 @@ module NovaPoshta
     def data
       body['data'].map do |attrs|
         response_class.new(attrs) do |r|
-          r.api = @api
           r.result = self
         end
       end if body['data']

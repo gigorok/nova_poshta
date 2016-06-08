@@ -9,7 +9,7 @@ module NovaPoshta
 
       # ugly API do not provide searching by city reference
       def city(params={})
-        @api.request('getCities', params).select { |city| city.ref == self.city_ref }.first.result
+        address.cities(params).select { |city| city.ref == self.city_ref }.first.result
       end
 
     end

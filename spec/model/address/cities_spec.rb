@@ -110,8 +110,6 @@ describe 'getCities' do
               }
           }.to_json).
           to_return(status: 200, body: read_fixture_file('get_warehouses.json'))
-
-      city.api = model.api
     end
 
     subject do
@@ -197,8 +195,6 @@ describe 'getCities' do
               methodProperties: {}
           }.to_json).
           to_return(status: 200, body: read_fixture_file('get_areas.json'))
-
-      city.api = model.api
     end
 
     subject do

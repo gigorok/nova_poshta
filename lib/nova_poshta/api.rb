@@ -6,19 +6,18 @@ module NovaPoshta
   class Api
     API_URL = 'https://api.novaposhta.ua/v2.0/json/'.freeze
 
-    attr_accessor :api_key, :model_name
+    attr_accessor :api_key
 
-    def initialize(model_name)
+    def initialize
       self.api_key = NovaPoshta.configuration.api_key
-      self.model_name = model_name
     end
 
-    def request(called_method, method_properties={})
-      response = post(request_body(called_method, method_properties))
-      ::NovaPoshta::Result.new(response, called_method, self)
+    def request(model_name, called_method, method_properties={})
+      response = post(request_body(model_name, called_method, method_properties))
+      ::NovaPoshta::Result.new(response, called_method)
     end
 
-    def request_body(called_method, method_props={})
+    def request_body(model_name, called_method, method_props={})
       camelize_keys(
           {
               api_key: api_key,

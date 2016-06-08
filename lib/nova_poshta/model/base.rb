@@ -2,10 +2,14 @@ module NovaPoshta
   module Model
     class Base
 
-      attr_accessor :api
+      protected
 
-      def api
-        @api ||= Api.new(self.class.name.split('::').last)
+      def request(called_method, method_properties={})
+        NovaPoshta.api.request(model_name, called_method, method_properties)
+      end
+
+      def model_name
+        self.class.name.demodulize
       end
 
     end
