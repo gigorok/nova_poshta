@@ -5,7 +5,7 @@
 
 Ruby-client to novaposhta.ua API2.
 
-Look at API documentation by link https://my.novaposhta.ua/data/instruction_JSON_ver.1.7.pdf
+Look at API documentation by link https://devcenter.novaposhta.ua/docs/services/ (API Адреса)
 
 ## Installation
 
